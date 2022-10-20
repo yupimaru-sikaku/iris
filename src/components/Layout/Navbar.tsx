@@ -10,7 +10,7 @@ export const Navbar = () => {
 
   if (isModal) {
     return (
-      <div className="fixed top-0 z-50 h-screen w-screen bg-main-100">
+      <div className="text-blur-out fixed top-0 z-50 h-screen w-screen animate-slide-in-bottom bg-main-100">
         <NavBarModal setIsModal={setIsModal} />
       </div>
     );

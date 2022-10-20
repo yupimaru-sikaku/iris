@@ -20,6 +20,22 @@ module.exports = {
           300: '#02B151',
         },
       },
+      animation: {
+        'slide-in-bottom':
+          'slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both',
+      },
+      keyframes: {
+        'slide-in-bottom': {
+          '0%': {
+            transform: 'translateY(20px)',
+            opacity: '0',
+          },
+          to: {
+            transform: 'translateY(0)',
+            opacity: '1',
+          },
+        },
+      },
     },
   },
   plugins: [

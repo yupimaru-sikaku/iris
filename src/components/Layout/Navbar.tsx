@@ -26,8 +26,8 @@ export const Navbar = () => {
           height={45}
         />
         <div className="ml-3">
-          <p className="text-main-100 font-extrabold">Iris</p>
           <p className="text-xs">訪問看護ステーション</p>
+          <p className="text-main-100 font-extrabold">Iris</p>
         </div>
       </div>
       <ActionIcon onClick={() => setIsModal(true)} className="mr-3">

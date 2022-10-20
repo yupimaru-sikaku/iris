@@ -13,12 +13,12 @@ export const headerLink: headerLinkType[] = [
     logo: IconHome2,
   },
   {
-    link: '/',
+    link: '/service',
     label: 'サービス案内',
     logo: IconAccessible,
   },
   {
-    link: '/',
+    link: '/company',
     label: '会社案内',
     logo: IconBuildingCommunity,
   },
@@ -28,7 +28,7 @@ export const headerLink: headerLinkType[] = [
     logo: IconFriends,
   },
   {
-    link: '/',
+    link: '/contact',
     label: 'お問い合わせ',
     logo: IconMessageCircle2,
   },

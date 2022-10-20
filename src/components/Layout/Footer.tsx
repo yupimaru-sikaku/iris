@@ -16,11 +16,11 @@ export const Footer = () => {
           </a>
         </Link>
         <div className="ml-4 flex flex-col">
-          <BaseText content="middle" color="white" weight={900}>
-            Iris
-          </BaseText>
           <BaseText content="small" color="white">
             訪問看護ステーション
+          </BaseText>
+          <BaseText content="middle" color="white" weight={900}>
+            Iris
           </BaseText>
         </div>
       </div>
@@ -33,7 +33,7 @@ export const Footer = () => {
 
       <div>
         <BaseText content="small" align="center" color="white">
-          Iris訪問看護ステーション
+          訪問看護ステーションIris
         </BaseText>
         <div className="p-vw-10" />
         <BaseText content="small" align="center" color="white">

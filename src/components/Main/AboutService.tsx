@@ -6,13 +6,13 @@ import { IconExternalLink } from '@tabler/icons';
 
 export const AboutService = () => {
   return (
-    <div className="bg-yellow-50 px-4">
+    <div className="bg-gray-100 px-4">
       <div className="p-vw-32" />
 
       <div>
         <div className="flex flex-col items-center">
           <BaseText content="large">訪問看護とは</BaseText>
-          <span className="mt-1 mb-5 w-1/5 rounded border-4 border-main-100" />
+          <span className="mt-1 mb-5 w-1/6 rounded border-2 border-main-100" />
         </div>
         <BaseText content="middle">
           病気や障害を持った人が、住みなれた地域や家庭であなたらしく過ごせるよう生活の場へ訪問し、看護ケアを提供して療養生活を支援するサービスです。
@@ -20,13 +20,13 @@ export const AboutService = () => {
       </div>
 
       <div className="p-vw-28" />
-      <Divider />
+      <Divider color="cyan" />
       <div className="p-vw-28" />
 
       <div>
         <div className="flex flex-col items-center">
           <BaseText content="large">こんなケアをご提供します</BaseText>
-          <span className="mt-1 mb-5  w-1/5 rounded border-4 border-main-100" />
+          <span className="mt-1 mb-5  w-1/6 rounded border-2 border-main-100" />
         </div>
         <BaseText content="middle">
           脈拍や血圧、呼吸などの測定や、入浴や食事の援助、床ずれの処置や創傷処置など、在宅での生活や健康状態を支援し、良質な看護をめざしています。また、自費サービスやプライベート看護も相談いたします。
@@ -34,13 +34,13 @@ export const AboutService = () => {
       </div>
 
       <div className="p-vw-28" />
-      <Divider />
+      <Divider color="cyan" />
       <div className="p-vw-28" />
 
       <div>
         <div className="flex flex-col items-center">
           <BaseText content="large">連携機関</BaseText>
-          <span className="mt-1 mb-5 w-1/5 rounded border-4 border-main-100" />
+          <span className="mt-1 mb-5 w-1/6 rounded border-2 border-main-100" />
         </div>
         <Link href="/">
           <a className="flex items-center gap-2">

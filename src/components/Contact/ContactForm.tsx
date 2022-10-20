@@ -4,7 +4,7 @@ import { IconPhoneCall } from '@tabler/icons';
 
 export const ContactForm = () => {
   return (
-    <main className="p-3">
+    <main className="p-6">
       <div className="flex flex-col items-center">
         <BaseText content="large">お問い合わせ</BaseText>
         <span className="mt-1 mb-5 w-1/6 rounded border-2 border-main-100" />

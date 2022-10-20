@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 export const ServiceInfo = () => {
   return (
-    <main className="p-3">
+    <main className="p-6">
       <div className="p-vw-8" />
       <div className="flex flex-col items-center">
         <BaseText content="large" color="dark">
@@ -15,7 +15,7 @@ export const ServiceInfo = () => {
         </BaseText>
         <span className="mt-1 mb-5 w-1/6 rounded border-2 border-main-100" />
       </div>
-      <div className="p-vw-8" />
+      <div className="p-vw-16" />
       {serviceInfoList.map((content) => (
         <div key={content.label}>
           <div className="flex items-center gap-2">

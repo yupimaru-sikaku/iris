@@ -133,7 +133,7 @@ export const ContactForm = () => {
               form.values.content == ''
             }
           >
-            登録する
+            送信する
           </Button>
         </div>
       </form>

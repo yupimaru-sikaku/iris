@@ -2,7 +2,7 @@ import { Badge, Divider } from '@mantine/core';
 import React from 'react';
 import { useMediaQuery } from 'src/libs/mantine/useMediaQuery';
 import { aboutUsContent } from 'src/utils/aboutUsContent';
-import { BaseText } from '../Common/BaseText';
+import { BaseText } from 'src/components/Common/BaseText';
 
 export const AboutCompany = () => {
   const largerThanSm = useMediaQuery('sm');
@@ -26,7 +26,6 @@ export const AboutCompany = () => {
             </Badge>
             <p className="mt-2">{content.text}</p>
           </div>
-          <div className="p-vw-12" />
           <Divider />
           <div className="p-vw-12" />
         </div>

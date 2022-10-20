@@ -23,7 +23,7 @@ export const headerLink: headerLinkType[] = [
     logo: IconBuildingCommunity,
   },
   {
-    link: '/',
+    link: '/member',
     label: 'メンバー',
     logo: IconFriends,
   },

@@ -15,19 +15,6 @@ export const ContactForm = () => {
   const router = useRouter();
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? '';
 
-  useEffect(() => {
-    showNotification({
-      title: '送信されました',
-      message: '担当からご連絡があるまでお待ち下さい',
-      autoClose: false,
-      icon: (
-        <ActionIcon size="xs">
-          <CheckIcon color="white" />
-        </ActionIcon>
-      ),
-    });
-  }, []);
-
   const form = useForm({
     initialValues: {
       name: '',
@@ -55,10 +42,6 @@ export const ContactForm = () => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(contact),
-    }).then((res) => {
-      if (!res.ok) {
-        throw Error(`${res.status} ${res.statusText}`);
-      }
     });
 
     router.push('/');
@@ -68,7 +51,7 @@ export const ContactForm = () => {
       autoClose: false,
       icon: (
         <ActionIcon size="xs" color="cyan">
-          <CheckIcon />
+          <CheckIcon color="white" />
         </ActionIcon>
       ),
     });

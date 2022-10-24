@@ -20,7 +20,7 @@ export const AboutService = () => {
       </div>
 
       <div className="p-vw-28" />
-      <Divider color="cyan" />
+      <Divider color="cyan" label="Iris" labelPosition="right" />
       <div className="p-vw-28" />
 
       <div>
@@ -34,7 +34,7 @@ export const AboutService = () => {
       </div>
 
       <div className="p-vw-28" />
-      <Divider color="cyan" />
+      <Divider color="cyan" label="Iris" labelPosition="left" />
       <div className="p-vw-28" />
 
       <div>

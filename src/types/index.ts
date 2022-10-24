@@ -43,3 +43,11 @@ export type mainMenuCarouselLinkContentType = {
   label: string;
   link: string;
 };
+
+export type Contact = {
+  name: string;
+  furigana: string;
+  email: string;
+  phoneNumber?: string;
+  content: string;
+};

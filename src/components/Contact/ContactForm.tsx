@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BaseText } from 'src/components/Common/BaseText';
 import { IconPhoneCall } from '@tabler/icons';
 import { IconMailForward } from '@tabler/icons';
@@ -7,11 +7,13 @@ import { FormTextInput } from 'src/components/Common/FormTextInput';
 import { FormTextArea } from 'src/components/Common/FormTextArea';
 import { useFocusTrap } from '@mantine/hooks';
 import { Button } from '@mantine/core';
+import { Contact } from 'src/types';
+import { useRouter } from 'next/router';
 
 export const ContactForm = () => {
   const [isLoader, setIsLoader] = useState(false);
-
-  const focusTrapRef = useFocusTrap();
+  const router = useRouter();
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? '';
 
   const form = useForm({
     initialValues: {
@@ -32,8 +34,26 @@ export const ContactForm = () => {
     },
   });
 
-  const handleSubmit = async () => {
-    return null;
+  const handleSubmit = async (contact: Contact): Promise<void> => {
+    setIsLoader(true);
+    try {
+      await fetch(baseUrl + '/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(contact),
+      }).then((res) => {
+        if (!res.ok) {
+          throw Error(`${res.status} ${res.statusText}`);
+        }
+      });
+
+      void router.push('/contact');
+    } catch (err) {
+      void router.push('/contact/error');
+    }
+    setIsLoader(false);
   };
 
   return (
@@ -72,7 +92,7 @@ export const ContactForm = () => {
         </BaseText>
       </div>
 
-      <form onSubmit={form.onSubmit(handleSubmit)} ref={focusTrapRef}>
+      <form onSubmit={form.onSubmit(handleSubmit)}>
         <div>
           <FormTextInput
             idText="name"
@@ -130,8 +150,10 @@ export const ContactForm = () => {
               form.values.name == '' ||
               form.values.furigana == '' ||
               form.values.email == '' ||
-              form.values.content == ''
+              form.values.content == '' ||
+              isLoader
             }
+            loading={isLoader}
           >
             送信する
           </Button>

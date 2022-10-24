@@ -24,7 +24,11 @@ export const AboutCompany = () => {
             >
               {content.label}
             </Badge>
-            <p className="mt-2">{content.text}</p>
+            <div className="p-vw-6" />
+
+            <BaseText content="small" color="dark">
+              {content.text}
+            </BaseText>
           </div>
           <Divider />
           <div className="p-vw-12" />

@@ -5,15 +5,28 @@ import { IconMailForward } from '@tabler/icons';
 import { useForm } from '@mantine/form';
 import { FormTextInput } from 'src/components/Common/FormTextInput';
 import { FormTextArea } from 'src/components/Common/FormTextArea';
-import { useFocusTrap } from '@mantine/hooks';
-import { Button } from '@mantine/core';
+import { ActionIcon, Button, CheckIcon } from '@mantine/core';
 import { Contact } from 'src/types';
 import { useRouter } from 'next/router';
+import { showNotification } from '@mantine/notifications';
 
 export const ContactForm = () => {
   const [isLoader, setIsLoader] = useState(false);
   const router = useRouter();
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? '';
+
+  useEffect(() => {
+    showNotification({
+      title: '送信されました',
+      message: '担当からご連絡があるまでお待ち下さい',
+      autoClose: false,
+      icon: (
+        <ActionIcon size="xs">
+          <CheckIcon color="white" />
+        </ActionIcon>
+      ),
+    });
+  }, []);
 
   const form = useForm({
     initialValues: {
@@ -36,23 +49,30 @@ export const ContactForm = () => {
 
   const handleSubmit = async (contact: Contact): Promise<void> => {
     setIsLoader(true);
-    try {
-      await fetch(baseUrl + '/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(contact),
-      }).then((res) => {
-        if (!res.ok) {
-          throw Error(`${res.status} ${res.statusText}`);
-        }
-      });
+    await fetch(baseUrl + '/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(contact),
+    }).then((res) => {
+      if (!res.ok) {
+        throw Error(`${res.status} ${res.statusText}`);
+      }
+    });
 
-      void router.push('/contact');
-    } catch (err) {
-      void router.push('/contact/error');
-    }
+    router.push('/');
+    showNotification({
+      title: '送信されました',
+      message: '担当からご連絡があるまでお待ち下さい',
+      autoClose: false,
+      icon: (
+        <ActionIcon size="xs" color="cyan">
+          <CheckIcon />
+        </ActionIcon>
+      ),
+    });
+
     setIsLoader(false);
   };
 

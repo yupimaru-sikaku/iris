@@ -4,7 +4,7 @@ import { BaseText } from 'src/components/Common/BaseText';
 
 export const MemberList = () => {
   return (
-    <main className="p-6">
+    <main className="p-6 animate-slide-in-bottom">
       <div className="flex flex-col items-center">
         <BaseText content="large" color="dark">
           代表挨拶

@@ -4,7 +4,7 @@ import { BaseText } from '../Common/BaseText';
 
 export const HeroSection = () => {
   return (
-    <div>
+    <div className="animate-slide-in-bottom">
       <Image
         src="/hero.png"
         layout="responsive"

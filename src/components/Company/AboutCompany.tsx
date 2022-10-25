@@ -8,7 +8,7 @@ export const AboutCompany = () => {
   const largerThanSm = useMediaQuery('sm');
 
   return (
-    <main className="p-3">
+    <main className="p-3 animate-slide-in-bottom">
       <div className="flex flex-col items-center">
         <BaseText content="large">会社概要</BaseText>
         <span className="mt-1 mb-5 w-1/6 rounded border-2 border-main-100" />

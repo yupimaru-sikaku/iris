@@ -40,18 +40,18 @@ export const Footer = () => {
           【営業時間】
         </BaseText>
         <BaseText content="small" align="center" color="white">
-          平日 9:00〜18:00 （休日：土日祝 ※応相談）
+          平日15:00〜19:00
         </BaseText>
         <div className="p-vw-10" />
         <BaseText content="small" align="center" color="white">
-          〒558-0003
+          〒572-0077
         </BaseText>
         <BaseText content="small" align="center" color="white">
-          大阪府大阪市住吉区長居2-6-20 オムズコート105号
+          大阪府寝屋川市点野3-30-4 2-A
         </BaseText>
         <div className="p-vw-10" />
         <BaseText content="small" align="center" color="white">
-          TEL 06-6696-8051
+          TEL 072-828-7776
         </BaseText>
       </div>
 

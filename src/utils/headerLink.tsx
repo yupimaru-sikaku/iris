@@ -12,21 +12,21 @@ export const headerLink: headerLinkType[] = [
     label: 'ホーム',
     logo: IconHome2,
   },
-  {
-    link: '/service',
-    label: 'サービス案内',
-    logo: IconAccessible,
-  },
+  // {
+  //   link: '/service',
+  //   label: 'サービス案内',
+  //   logo: IconAccessible,
+  // },
   {
     link: '/company',
     label: '会社案内',
     logo: IconBuildingCommunity,
   },
-  {
-    link: '/member',
-    label: 'メンバー',
-    logo: IconFriends,
-  },
+  // {
+  //   link: '/member',
+  //   label: 'メンバー',
+  //   logo: IconFriends,
+  // },
   {
     link: '/contact',
     label: 'お問い合わせ',

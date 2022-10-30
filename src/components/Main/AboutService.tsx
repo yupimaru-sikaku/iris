@@ -11,64 +11,24 @@ export const AboutService = () => {
 
       <div>
         <div className="flex flex-col items-center">
-          <BaseText content="large">訪問看護とは</BaseText>
+          <BaseText content="large" color="dark">
+            訪問看護ステーションIrisの特徴
+          </BaseText>
           <span className="mt-1 mb-5 w-1/6 rounded border-2 border-main-100" />
         </div>
         <BaseText content="middle">
-          病気や障害を持った人が、住みなれた地域や家庭であなたらしく過ごせるよう生活の場へ訪問し、看護ケアを提供して療養生活を支援するサービスです。
+          障がい者のグループホームがメインの精神科専門の訪問看護チーム。
+          当法人にて、障がい者のグループホームを運営してるからこそ、グループホームでの生活や日々の悩みなどを共に利用者さん目線で考えていくことができます。
+          <br />
+          <br />
+          また利用者さんだけでなく、普段からご支援頂いているスタッフさんの悩みも含めてのトータル支援していくことを心がけています。
+          <br />
+          <br />
+          さらに、医療的な介入が難しい障がい者グループホームにて、日常的な健康管理を行い、利用者さんの地域生活をサポートするために連携を行っています。
         </BaseText>
       </div>
 
-      <div className="p-vw-28" />
-      <Divider color="cyan" label="Iris" labelPosition="right" />
-      <div className="p-vw-28" />
-
-      <div>
-        <div className="flex flex-col items-center">
-          <BaseText content="large">こんなケアをご提供します</BaseText>
-          <span className="mt-1 mb-5  w-1/6 rounded border-2 border-main-100" />
-        </div>
-        <BaseText content="middle">
-          脈拍や血圧、呼吸などの測定や、入浴や食事の援助、床ずれの処置や創傷処置など、在宅での生活や健康状態を支援し、良質な看護をめざしています。また、自費サービスやプライベート看護も相談いたします。
-        </BaseText>
-      </div>
-
-      <div className="p-vw-28" />
-      <Divider color="cyan" label="Iris" labelPosition="left" />
-      <div className="p-vw-28" />
-
-      <div>
-        <div className="flex flex-col items-center">
-          <BaseText content="large">連携機関</BaseText>
-          <span className="mt-1 mb-5 w-1/6 rounded border-2 border-main-100" />
-        </div>
-        <Link href="/">
-          <a className="flex items-center gap-2">
-            <BaseText content="middle">■ 山田医院</BaseText>
-            <ActionIcon size="sm">
-              <IconExternalLink />
-            </ActionIcon>
-          </a>
-        </Link>
-        <BaseText content="small">
-          〒545-0023 大阪府大阪市阿倍野区王子町2-12-14
-        </BaseText>
-
-        <div className="p-vw-10" />
-
-        <Link href="/">
-          <a className="flex items-center gap-2">
-            <BaseText content="middle">■ ホワイトネットケアセンター</BaseText>
-            <ActionIcon size="sm">
-              <IconExternalLink />
-            </ActionIcon>
-          </a>
-        </Link>
-        <BaseText content="small">
-          〒558-0042 大阪市住吉区東粉浜2-12-11
-        </BaseText>
-      </div>
-      <div className="p-vw-32" />
+      <div className="p-vw-24" />
     </div>
   );
 };

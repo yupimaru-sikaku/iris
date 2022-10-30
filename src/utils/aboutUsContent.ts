@@ -17,11 +17,11 @@ export const aboutUsContent = [
   },
   {
     label: '設立日',
-    text: '教えて',
+    text: '平成28年7月29日',
   },
   {
     label: '営業日',
-    text: '平日9:00〜18:00（休日: 土日祝 ＊応相談）',
+    text: '平日15:00〜19:00',
   },
   {
     label: '所在地',

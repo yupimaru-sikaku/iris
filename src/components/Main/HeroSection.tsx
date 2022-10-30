@@ -34,9 +34,6 @@ export const HeroSection = () => {
             落ち着いた気持ちで生活ができるように。
             <br />
             そして、その先に楽しい日々を。
-            <br />
-            <br />
-            そんな想いで私達は看護を提供しています。
           </BaseText>
         </div>
       </BackgroundImage>

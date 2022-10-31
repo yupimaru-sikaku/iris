@@ -8,7 +8,7 @@ import { HeroNavBar } from 'src/components/Layout/HeroNavBar';
 export const HeroSection = () => {
   const largerThanSm = useMediaQuery('sm');
   return (
-    <div className="animate-slide-in-bottom">
+    <div className="animate-fade-in">
       <BackgroundImage src="/hero.png">
         {largerThanSm && <HeroNavBar bright="light" />}
         <div className="p-6 sm:px-40">

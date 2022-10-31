@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 export const ServiceInfo = () => {
   return (
-    <main className="animate-slide-in-bottom p-6">
+    <main className="animate-fade-in p-6">
       <div className="p-vw-8" />
       <div className="flex flex-col items-center">
         <BaseText content="large" color="dark">

@@ -21,17 +21,15 @@ module.exports = {
         },
       },
       animation: {
-        'slide-in-bottom':
-          'slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)   both',
+        'fade-in':
+          'fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both',
       },
       keyframes: {
-        'slide-in-bottom': {
+        'fade-in': {
           '0%': {
-            transform: 'translateY(20px)',
             opacity: '0',
           },
           to: {
-            transform: 'translateY(0)',
             opacity: '1',
           },
         },

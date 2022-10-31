@@ -13,14 +13,14 @@ export const Navbar = () => {
 
   if (isModal) {
     return (
-      <div className="text-blur-out fixed top-0 z-50 h-screen w-screen animate-slide-in-bottom bg-main-100">
+      <div className="fixed top-0 z-50 h-screen w-screen animate-fade-in animate-fade-in bg-main-100">
         <NavBarModal setIsModal={setIsModal} />
       </div>
     );
   }
 
   return (
-    <header className="flex h-16 items-center justify-between sm:justify-around border-b">
+    <header className="flex h-16 animate-fade-in items-center justify-between border-b sm:justify-around">
       <Link href="/">
         <a className="ml-3 flex items-center">
           <Image
@@ -37,7 +37,7 @@ export const Navbar = () => {
         </a>
       </Link>
       {largerThanSm ? (
-        <div className="text-sm text-end">
+        <div className="text-end text-sm">
           <p className="mb-2">【営業時間】平日15:00 〜 19:00</p>
           <span className="rounded-md bg-main-100 p-0.5 text-sm text-white ">
             お問い合わせ

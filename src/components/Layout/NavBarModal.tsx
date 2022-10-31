@@ -10,6 +10,7 @@ type Props = {
 
 export const NavBarModal = ({ setIsModal }: Props) => {
   const router = useRouter();
+
   useEffect(() => {
     () => setIsModal(false);
   }, []);

@@ -1,13 +1,17 @@
 import { BackgroundImage } from '@mantine/core';
 import Image from 'next/image';
 import React from 'react';
+import { useMediaQuery } from 'src/libs/mantine/useMediaQuery';
 import { BaseText } from '../Common/BaseText';
+import { HeroNavBar } from 'src/components/Layout/HeroNavBar';
 
 export const HeroSection = () => {
+  const largerThanSm = useMediaQuery('sm');
   return (
     <div className="animate-slide-in-bottom">
       <BackgroundImage src="/hero.png">
-        <div className="p-6">
+        {largerThanSm && <HeroNavBar bright="light" />}
+        <div className="p-6 sm:px-40">
           <BaseText content="large" color="white" size={32}>
             Live in peace
           </BaseText>

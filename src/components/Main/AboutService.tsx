@@ -6,7 +6,7 @@ import { IconExternalLink } from '@tabler/icons';
 
 export const AboutService = () => {
   return (
-    <div className="animate-slide-in-bottom bg-gray-100 px-4">
+    <div className="animate-slide-in-bottom bg-gray-100 px-4 sm:px-40">
       <div className="p-vw-32" />
 
       <div>

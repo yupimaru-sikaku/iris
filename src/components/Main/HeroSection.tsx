@@ -1,5 +1,4 @@
 import { BackgroundImage } from '@mantine/core';
-import Image from 'next/image';
 import React from 'react';
 import { useMediaQuery } from 'src/libs/mantine/useMediaQuery';
 import { BaseText } from '../Common/BaseText';

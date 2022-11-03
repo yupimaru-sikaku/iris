@@ -11,12 +11,10 @@ export const AboutService = () => {
 
       <div>
         <div className="flex flex-col items-center">
-          <BaseText content="large" color="dark">
-            訪問看護ステーションIrisの特徴
-          </BaseText>
+          <BaseText content="large">訪問看護ステーションIrisの特徴</BaseText>
           <span className="mt-1 mb-5 w-1/6 rounded border-2 border-main-100" />
         </div>
-        <BaseText content="middle">
+        <BaseText color="gray" lineHeight={2}>
           障がい者のグループホームがメインの精神科専門の訪問看護チーム。
           当法人にて、障がい者のグループホームを運営してるからこそ、グループホームでの生活や日々の悩みなどを共に利用者さん目線で考えていくことができます。
           <br />

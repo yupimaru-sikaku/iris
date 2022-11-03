@@ -1,23 +1,15 @@
-import { ActionIcon } from '@mantine/core';
+import { ActionIcon, Modal } from '@mantine/core';
 import { IconMenu2 } from '@tabler/icons';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import { NavBarModal } from 'src/components/Layout/NavBarModal';
 import { useMediaQuery } from 'src/libs/mantine/useMediaQuery';
 import { BaseText } from 'src/components/Common/BaseText';
+import { NavBarModal } from 'src/components/Layout/NavBarModal';
 
 export const Navbar = () => {
   const largerThanSm = useMediaQuery('sm');
-  const [isModal, setIsModal] = useState<boolean>(false);
-
-  if (isModal) {
-    return (
-      <div className="fixed top-0 z-50 h-screen w-screen animate-fade-in animate-fade-in bg-main-100">
-        <NavBarModal setIsModal={setIsModal} />
-      </div>
-    );
-  }
+  const [opened, setOpened] = useState(false);
 
   return (
     <header className="flex h-16 animate-fade-in items-center justify-between border-b sm:justify-around">
@@ -45,10 +37,21 @@ export const Navbar = () => {
           <span className="ml-3 text-sm text-main-100">072-828-7776</span>
         </div>
       ) : (
-        <ActionIcon onClick={() => setIsModal(true)} className="mr-3">
+        <ActionIcon onClick={() => setOpened(true)} className="mr-3">
           <IconMenu2 className="text-main-100" />
         </ActionIcon>
       )}
+      <Modal
+        opened={opened}
+        onClose={() => setOpened(false)}
+        transition="fade"
+        transitionDuration={600}
+        transitionTimingFunction="ease"
+        fullScreen
+        title="メニュー"
+      >
+        <NavBarModal />
+      </Modal>
     </header>
   );
 };

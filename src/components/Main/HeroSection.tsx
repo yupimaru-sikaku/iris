@@ -12,29 +12,29 @@ export const HeroSection = () => {
       <BackgroundImage src="/hero.png">
         {largerThanSm && <HeroNavBar bright="light" />}
         <div className="p-6 sm:px-40">
-          <BaseText content="large" color="white" size={32}>
+          <BaseText content="large" color="white" size={90}>
             Live in peace
           </BaseText>
           <div className="ml-10">
-            <BaseText content="large" color="white" size={32}>
+            <BaseText content="large" color="white" size={90}>
               Keep enjoy
             </BaseText>
           </div>
 
           <div className="p-vw-8" />
 
-          <BaseText content="middle" color="white">
+          <BaseText color="white" size={40}>
             心落ち着いた生活
           </BaseText>
           <div className="ml-10">
-            <BaseText content="middle" color="white">
+            <BaseText color="white" size={40}>
               そして、楽しみ続けよう
             </BaseText>
           </div>
 
           <div className="p-vw-10" />
 
-          <BaseText content="small" color="white">
+          <BaseText color="white" size={32}>
             落ち着いた気持ちで生活ができるように。
             <br />
             そして、その先に楽しい日々を。

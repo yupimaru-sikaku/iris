@@ -65,7 +65,7 @@ export const ContactForm = () => {
         <BaseText content="large">お問い合わせ</BaseText>
         <span className="mt-1 mb-5 w-1/6 rounded border-2 border-main-100" />
       </div>
-      <BaseText content="middle">
+      <BaseText color="gray">
         訪問看護に関するご相談やご質問、その他お問い合わせなどについては、下記のお問い合わせフォームよりお問い合わせください。
       </BaseText>
 
@@ -144,7 +144,7 @@ export const ContactForm = () => {
             variant="filled"
           />
         </div>
-        <div className="p-vw-24" />
+        <div className="p-vw-12" />
         <div className="text-center">
           <Button
             className="w-32"
@@ -162,8 +162,6 @@ export const ContactForm = () => {
           </Button>
         </div>
       </form>
-
-      <div className="p-vw-8" />
 
       <div className="p-vw-16" />
     </main>

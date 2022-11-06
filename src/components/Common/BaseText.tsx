@@ -77,7 +77,6 @@ export const BaseText: NextPage<Props> = ({
     }
   }, [lagerThanMd, lagerThanXs]);
 
-  console.log(padding);
 
   return (
     <Text
